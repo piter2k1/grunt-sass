@@ -30,6 +30,12 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 grunt.initConfig({
 	sass: {
 		options: {
+            // Inject dynamic variables on top of source.
+          	vars: {
+              foo: true,		// => $foo: true;
+              bar: false,		// => $bar: false;
+              height: '300px'   // => $height: 300px;
+          	}
 			sourceMap: true
 		},
 		dist: {
@@ -51,6 +57,8 @@ Files starting with `_` are ignored to match the expected [Sass partial behaviou
 See the `node-sass` [options](https://github.com/sass/node-sass#options), except for `file`, `outFile`, `success`, `error`.
 
 The default value for the `precision` option is `10`, so you don't have to change it when using Bootstrap.
+
+🔥 **Added option `vars` for inject dynamic variables.**
 
 
 ## License
