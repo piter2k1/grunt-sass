@@ -32,9 +32,9 @@ grunt.initConfig({
 		options: {
             // Inject dynamic variables on top of source.
           	vars: {
-              foo: true,		// => $foo: true;
-              bar: false,		// => $bar: false;
-              height: '300px'   // => $height: 300px;
+                        foo: true,        // => $foo: true;
+                        bar: false,       // => $bar: false;
+                        height: '300px'   // => $height: 300px;
           	}
 			sourceMap: true
 		},
