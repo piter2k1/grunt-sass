@@ -20,6 +20,14 @@ module.exports = function (grunt) {
 				return;
 			}
 
+			if (opts.vars) {
+				var data = '';
+				Object.keys(opts.vars).forEach(function (key) {
+					data += '$' + key + ': ' + opts.vars[key] + ';\n';
+				});
+				opts.data = data + grunt.file.read(src);
+			}
+
 			sass.render(assign({}, opts, {
 				file: src,
 				outFile: el.dest
