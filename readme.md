@@ -30,12 +30,12 @@ require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 grunt.initConfig({
 	sass: {
 		options: {
-            // Inject dynamic variables on top of source.
-          	vars: {
-                        foo: true,        // => $foo: true;
-                        bar: false,       // => $bar: false;
-                        height: '300px'   // => $height: 300px;
-          	}
+                        // Inject dynamic variables on top of source.
+          	        vars: {
+                                foo: true,        // => $foo: true;
+                                bar: false,       // => $bar: false;
+                                height: '300px'   // => $height: 300px;
+          	        }
 			sourceMap: true
 		},
 		dist: {
